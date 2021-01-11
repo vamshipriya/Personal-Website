@@ -1,19 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<div>
-    {% url 'public:index' as index_url %}
-    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'public:index' %}">Home</a>{% endif %}</span>
-    {% url 'public:about' as about_url %}
-    <span>{% if request.path == about_url %}About{% else %}<a href="{% url 'public:about' %}">About</a>{% endif %}</span>
-    {% url 'public:contact' as contact_url %}
-    <span>{% if request.path == contact_url %}Contact{% else %}<a href="{% url 'public:contact' %}">Contact</a>{% endif %}</span>
-    <span style="float:right">
-        {% if user.is_authenticated %}
-            {% url 'accounts:profile' as profile_url %}
-            <span>Hi, {% if request.path == profile_url %}{{ user.username }}{% else %}<a href="{% url 'accounts:profile' %}">{{ user.username }}</a>{% endif %}</span>
-            <span><a href="{% url 'accounts:logout' %}">Logout</a></span>
-        {% else %}
-            <span><a href="{% url 'accounts:login' %}">Login</a></span>
-        {% endif %}
-    </span>
-</div>
+  {% url 'public:index' as index_url %}
+  {% url 'public:about' as about_url %}
+  {% url 'public:contact' as contact_url %}
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">VAMSHI PRIYA</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == index_url %}active{% endif %}" href="{% url 'public:index' %}">Home</a></li>
+
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == index_url %}active{% endif %}" href="{% url 'public:about' %}">About</a></li>
+
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == index_url %}active{% endif %}" href="#{% url 'public:contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+<!--<html lang="en">-->
+<!--<div>-->
+<!--    {% url 'public:index' as index_url %}-->
+<!--    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'public:index' %}">Home</a>{% endif %}</span>-->
+<!--    {% url 'public:about' as about_url %}-->
+<!--    <span>{% if request.path == about_url %}About{% else %}<a href="{% url 'public:about' %}">About</a>{% endif %}</span>-->
+<!--    {% url 'public:contact' as contact_url %}-->
+<!--    <span>{% if request.path == contact_url %}Contact{% else %}<a href="{% url 'public:contact' %}">Contact</a>{% endif %}</span>-->
+<!--    <span style="float:right">-->
+<!--        {% if user.is_authenticated %}-->
+<!--            {% url 'accounts:profile' as profile_url %}-->
+<!--            <span>Hi, {% if request.path == profile_url %}{{ user.username }}{% else %}<a href="{% url 'accounts:profile' %}">{{ user.username }}</a>{% endif %}</span>-->
+<!--            <span><a href="{% url 'accounts:logout' %}">Logout</a></span>-->
+<!--        {% else %}-->
+<!--            <span><a href="{% url 'accounts:login' %}">Login</a></span>-->
+<!--        {% endif %}-->
+<!--    </span>-->
+<!--</div>-->

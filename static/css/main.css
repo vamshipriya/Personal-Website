@@ -1,0 +1,23 @@
+#main {
+  padding-top: 74px;
+}
+
+@media (min-width: 992px) {
+  #main {
+    padding-top: 104px;
+  }
+  }
+
+@font-face {
+    font-family: "source sans";
+    src:
+    url("fonts/SourceSansPro-ExtraLightIt.otf") format("opentype"),
+    url("fonts/SourceSansPro-LightIt.otf") format("opentype"),
+    url("fonts/SourceSansPro-SemiboldIt.otf") format("opentype");
+}
+
+.navbar-brand {
+    font-family: "source sans";
+
+}
+
