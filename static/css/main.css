@@ -18,6 +18,34 @@
 
 .navbar-brand {
     font-family: "source sans";
-
 }
+
+@media (min-width: 992px)
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    color: #fff;
+    background: #1abc9c;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #1abc9c;
+    border-color: #1abc9c;
+    background: none
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    borrder-bottom: 2px solid transparent;
+    transition: border-bottom .2s color .2s
+    color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+/* .masthead {
+    background-image: url("../img/coding2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}*/
 
